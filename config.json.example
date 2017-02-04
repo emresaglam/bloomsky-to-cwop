@@ -1,0 +1,17 @@
+{
+  "bloomsky": {
+    "url": "https://api.bloomsky.com/api/skydata/",
+    "api_key": "API KEY HERE"
+  },
+  "station":{
+    "type": "Bloomsky",
+    "name": "YOUR CWOP ID",
+    "pass": "YOUR CWOP PASS",
+    "latitude": "LATITUDE IN THE FORMAT DDMM.MM",
+    "longitude": "LONGITUDE IN THE FORMAT DDMM.MM"
+  },
+  "aprs":{
+    "server": "rotate.aprs2.net",
+    "port": 14580
+  }
+}
