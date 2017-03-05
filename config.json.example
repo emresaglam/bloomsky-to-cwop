@@ -4,7 +4,7 @@
     "api_key": "API KEY HERE"
   },
   "station":{
-    "type": "Bloomsky",
+    "type": "Sent by Bloomsky to CWOP script: https://github.com/emresaglam/bloomsky-to-cwop",
     "name": "YOUR CWOP ID",
     "pass": "YOUR CWOP PASS",
     "latitude": "LATITUDE IN THE FORMAT DDMM.MM",
