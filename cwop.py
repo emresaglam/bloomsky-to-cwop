@@ -13,23 +13,23 @@ class Connect(object):
     def connect(self):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.settimeout(2)
-        print('connecting to host')
+        #print('connecting to host')
         try:
             sock.connect((self.IP, self.port))
         except:
             print "Unable to connect!"
             sys.exit()
-        print "Connected to %s on port %s" % (self.IP, self.port)
+        #print "Connected to %s on port %s" % (self.IP, self.port)
         return sock
 
     def send(self, command):
         sock = self.connect()
 
-        print('sending: ' + command)
+        #print('sending: ' + command)
         sock.sendall(command)
 
     def close(self):
-        print "Disconnecting from %s" % self.IP
+        #print "Disconnecting from %s" % self.IP
         sock.shutdown()
         sock.close()
 
@@ -98,6 +98,7 @@ aprs_packet = make_aprs_wx(temperature=bloomskyData[0]["Data"]["Temperature"], h
 
 
 connect = Connect(IP=APRS_SERVER, port=APRS_PORT)
-print connect.send(login + aprs_packet + "\n")
+#print connect.send(login + aprs_packet + "\n")
+connect.send(login + aprs_packet + "\n")
 
 sys.exit()
