@@ -3,6 +3,11 @@ import requests
 from datetime import datetime, date, time
 import sys
 import json
+import argparse
+
+parser = argparse.ArgumentParser(description='Take Bloomsky device data and push it to CWOP.')
+parser.add_argument('--config', '-c', default='config.json')
+args=parser.parse_args()
 
 class Connect(object):
 
@@ -34,7 +39,7 @@ class Connect(object):
         sock.close()
 
 
-with open("config.json", "r") as f:
+with open(args.config, "r") as f:
     conf = json.loads(f.read())
 
 STATION_TYPE = conf["station"]["type"]
