@@ -39,7 +39,13 @@ class Connect(object):
         sock.close()
 
 
-with open(args.config, "r") as f:
+try:
+    f = open(args.config, "r")
+except IOError:
+    print "Couldn't read/open file:", args.config
+    sys.exit()
+
+with f:
     conf = json.loads(f.read())
 
 STATION_TYPE = conf["station"]["type"]
