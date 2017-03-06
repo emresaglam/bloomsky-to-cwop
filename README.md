@@ -15,8 +15,13 @@ Citizen Weather Observer Program: http://wxqa.com/
 
 # Usage
 
-```python /script/folder/cwop.py --config /path/to/config.json```
+```bash
+python /script/folder/cwop.py --config /path/to/config.json
+```
 
-If you use only like below, it will expect config.json to be in the same folder as the script:
-```python /script/folder/cwop.py```
+If you use with no flags, it will expect config.json to be in the same folder as the script:
+
+```bash
+python /script/folder/cwop.py
+```
 
