@@ -1,4 +1,4 @@
-This script sends bloomsky data to Citizen Weather Observer Program (CWOP)
+This script sends Bloomsky data to Citizen Weather Observer Program (CWOP)
 
 Citizen Weather Observer Program: http://wxqa.com/
 
@@ -25,3 +25,5 @@ If you use with no flags, it will expect config.json to be in the same folder as
 python /script/folder/cwop.py
 ```
 
+---
+###### I have no affiliations with BloomSky
