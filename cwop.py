@@ -22,7 +22,7 @@ class Connect(object):
         try:
             sock.connect((self.IP, self.port))
         except:
-            print "Unable to connect!"
+            print("Unable to connect!")
             sys.exit()
         #print "Connected to %s on port %s" % (self.IP, self.port)
         return sock
@@ -31,7 +31,7 @@ class Connect(object):
         sock = self.connect()
 
         #print('sending: ' + command)
-        sock.sendall(command)
+        sock.sendall(command.encode())
 
     def close(self):
         #print "Disconnecting from %s" % self.IP
@@ -42,7 +42,7 @@ class Connect(object):
 try:
     f = open(args.config, "r")
 except IOError:
-    print "Couldn't read/open file:", args.config
+    print("Couldn't read/open file: {}".format(args.config))
     sys.exit()
 
 with f:
@@ -102,6 +102,7 @@ def get_bloomsky_data():
     return bloomskyData
 
 bloomskyData = get_bloomsky_data()
+#print(json.dumps(bloomskyData))
 
 
 login = "user %s pass %s vers Test\n" % (STATION_NAME, STATION_PASS)
